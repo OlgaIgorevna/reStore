@@ -12,4 +12,4 @@ const withBookstoreService = (WrappedComponent)=>{
     }
 };
 
-export default withBookstoreService;
+export {withBookstoreService}
