@@ -1,0 +1,31 @@
+.book-list-item{
+    display: flex;
+    margin-bottom: 20px;
+}
+.book-list-item .book-cover{
+    width: 150px;
+    height: 230px;
+    flex-shrink: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #00bc8c;
+    margin-right: 40px;
+}
+.book-list-item .book-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+.book-list-item .book-details .add-to-cart{
+    margin-top: auto;
+}
+.book-list-item .book-details .book-title{
+    font-size: 1.2rem;
+}
+.book-list-item .book-details .book-price{
+    font-size: 1.4rem;
+}
