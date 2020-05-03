@@ -1,34 +1,46 @@
-const initialState = {
-    books: [],
-    loading: true,
-    error: null
+
+import updateBookList from "./book-list";
+import updateShoppingCart from "./shopping-cart";
+/*const initialState = {
+    bookList: {
+        books: [],
+        loading: true,
+        error: null,
+    },
+    shoppingCart: {
+        cartItems: [],
+        orderTotal: 0
+    }
+};*/
+
+
+
+const reducer = (state, action)=>{
+    return {
+        bookList: updateBookList(state, action),
+        shoppingCart: updateShoppingCart(state, action)
+    }
 };
 
-const reducer = (state = initialState, action)=>{
-
+/*const reducer = (state = initialState, action)=>{
     switch(action.type){
-        case 'BOOKS_REQUESTED':
+        case 'FETCH_BOOKS_REQUEST':
+        case 'FETCH_BOOKS_SUCCESS':
+        case 'FETCH_BOOKS_FAILURE':
             return {
-                books: [],
-                loading: true,
-                error: null
+                ...state,
+                bookList: updateBookList(state, action)
             };
-        case 'BOOKS_LOADED':
+        case 'BOOK_ADDED_TO_CART':
+        case 'BOOK_REMOVED_FROM_CART':
+        case 'ALL_BOOKS_REMOVED_FROM_CART':
             return {
-                books: action.payload,
-                loading: false,
-                error: null
-            };
-        case 'BOOKS_ERROR':
-            return {
-                books: [],
-                loading: false,
-                error: action.payload
+                ...state,
+                shoppingCart: updateShoppingCart(state, action)
             };
         default:
             return state;
     }
-
-};
+};*/
 
 export default reducer;

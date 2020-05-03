@@ -4,9 +4,9 @@ import ShoppingCartTable from "../shopping-cart-table";
 const HomePage = ()=>{
 
     return <div>
-        <h3>Home Page</h3>
-    <BookList/>
-        <ShoppingCartTable/>
+                <h3>Home Page</h3>
+                <BookList/>
+                <ShoppingCartTable/>
 
     </div>
 };
